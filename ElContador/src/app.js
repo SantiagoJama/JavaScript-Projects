@@ -25,6 +25,8 @@ const resetCounter = () =>{
 }
 
 const increaseCounter = () =>{
+    $spanWarning.textContent = ""
+    $spanWarning.classList.replace('show','hidden');
     currentNumber++;
     $currentNumber.textContent = String(currentNumber);
 }
