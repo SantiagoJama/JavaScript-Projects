@@ -1,9 +1,7 @@
 
-const $decrease = document.getElementById('decrease'),
-      $reset = document.getElementById('reset'),
-      $increase = document.getElementById('increase'),
-      $currentNumber = document.getElementById('current-number'),
-      $spanWarning = document.getElementById('warning');
+const $currentNumber = document.getElementById('current-number'),
+      $spanWarning = document.getElementById('warning'),
+      $divBtnContainer = document.getElementById('button-container');
 
 let currentNumber = 0;
 $currentNumber.textContent = String(currentNumber);
@@ -32,6 +30,13 @@ const increaseCounter = () =>{
 }
 
 //event handler
-$increase.addEventListener('click',increaseCounter);
-$decrease.addEventListener('click',decreaseCounter);
-$reset.addEventListener('click',resetCounter)
+$divBtnContainer.addEventListener('click', ( e )=>{
+    if( e.target.id === 'decrease' ) decreaseCounter();
+
+    else if ( e.target.id === 'reset') resetCounter();
+
+    else increaseCounter();
+})
+
+
+
