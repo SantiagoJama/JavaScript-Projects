@@ -110,10 +110,16 @@ a:hover{
 }
     .img-container__circle{
         border-radius: 50%;
+        width: 20%;
+        height: 20%;
     }
     .img-container__circle img{
         display: block;
-        width: auto;
-        height: auto;
         border-radius: 50%;
+        width: 10em;
+        height: 10em;
+    }
+
+    .bio{
+        text-align: justify;
     }

@@ -1,4 +1,4 @@
-const imgResource = "https://placeimg.com/200/200/people",
+const imgResource = "https://source.unsplash.com/category/people",
       bioResource = "https://jsonplaceholder.typicode.com/comments",
       namesResource = "https://jsonplaceholder.typicode.com/users";
 
@@ -22,8 +22,13 @@ const userNameRequest = () =>{
 }
 
 const userImgRequest = () =>{
-    $imgUser.setAttribute('src',`${imgResource}`);
-    $imgUser.setAttribute('alt','User')
+     fetch(imgResource)
+         .then( response => {
+             $imgUser.setAttribute('src',`${response.url}`);
+             $imgUser.setAttribute('alt','User')
+         })
+
+
 }
 
 const userBioRequest = () =>{
@@ -35,10 +40,15 @@ const userBioRequest = () =>{
         })
 }
 
-$btnHandler.addEventListener('click', (e)=>{
-    if ( e.target.type ==='submit') {
-        userNameRequest();
-        userImgRequest();
-        userBioRequest();
-    }
+window.addEventListener('load', ()=>{
+    userNameRequest();
+    userImgRequest();
+    userBioRequest();
+    $btnHandler.addEventListener('click', (e)=>{
+        if ( e.target.type ==='submit') {
+            userNameRequest();
+            userImgRequest();
+            userBioRequest();
+        }
+    })
 })
