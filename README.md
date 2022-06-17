@@ -1,6 +1,17 @@
 # Proyectos-JS
 Una serie de proyectos realizados, tomando como referencia el artículo de FreeCodeCamp
 
+### ReponsiveNavBar
+![How project looks like](./ResponsiveNavBar/src/img/pic1.png)
+![How project looks like](./ResponsiveNavBar/src/img/pic2.png)
+![How project looks like](./ResponsiveNavBar/src/img/pic3.png)
+#### Description
+- A responsive navigation bar 
+- It is using a little of  Bootstrap
+ 
+***
+
+
 ### Carrusel-Revision project
 ![How project looks like](./CarruselRevision/src/img/pic1.png)
 #### Description 
@@ -23,7 +34,7 @@ Una serie de proyectos realizados, tomando como referencia el artículo de FreeC
 ![How project looks like](./paletaDeColor/src/img/pic1.png)
 
 #### Description
-- Colores por nombres using an array and random numbers to set the background color
-- Colores HEX using a random number to set a color
+- Colores por nombres is using an array and random numbers to set the background color
+- Colores HEX is using a random number to set a color
 - Reset the value of the counter
 - It is using event listeners 
